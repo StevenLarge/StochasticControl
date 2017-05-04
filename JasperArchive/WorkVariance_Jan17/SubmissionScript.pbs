@@ -1,0 +1,19 @@
+#!/bin/bash
+# PBS -S /bin/bash
+#PBS Run Script for Westgrid Jobs
+
+cd $PBS_O_WORKDIR
+
+echo 'Current Working Directory is `pwd`'
+echo 'Running job on hostname `hostname`'
+
+echo 'Starting run at: `date`'
+
+python WorkVariancePrimary.py
+
+echo 'Finished Execution'
+
+
+
+
+

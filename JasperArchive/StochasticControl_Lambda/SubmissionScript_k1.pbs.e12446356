@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "WorkCalculation_k1.py", line 162, in <module>
+    WriteData(filename_base_write,WritePath,WorkTot,Tau)
+  File "WorkCalculation_k1.py", line 38, in WriteData
+    file1 = open(CompleteName,'w')
+IOError: [Errno 2] No such file or directory: 'Output/WorkTotal_a25_k1.dat'

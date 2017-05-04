@@ -1,0 +1,20 @@
+#!/bin/bash
+#This is the submission script for Time Separation simualtions submitted on January 23rd 2017
+
+cd TimeSeparation_256
+cd k01
+qsub -l walltime=32:00:00 SubmissionScript.pbs
+cd ..
+cd k001
+qsub -l walltime=32:00:00 SubmissionScript.pbs
+cd ..
+cd ..
+
+cd TimeSeparation_512
+cd k01
+qsub -l walltime=32:00:00 SubmissionScript.pbs
+cd ..
+cd k001
+qsub -l walltime=32:00:00 SubmissionScript.pbs
+cd ..
+cd ..

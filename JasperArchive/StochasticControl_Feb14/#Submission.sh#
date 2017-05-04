@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd TimeSeparation_4
+tar -xvf *.tar
+python GeneratePBS.py
+
+
+

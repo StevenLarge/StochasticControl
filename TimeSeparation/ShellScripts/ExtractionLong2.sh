@@ -1,0 +1,50 @@
+#!/bin/bash
+#This is the extraction script for the third round of the time separation simulations
+
+cp TimeSeparation_1000/Output/WorkTotal_TS_1000_k1.dat WorkTotal_1000.dat
+cp TimeSeparation_1050/Output/WorkTotal_TS_1050_k1.dat WorkTotal_1050.dat
+cp TimeSeparation_1100/Output/WorkTotal_TS_1100_k1.dat WorkTotal_1100.dat
+cp TimeSeparation_1150/Output/WorkTotal_TS_1150_k1.dat WorkTotal_1150.dat
+cp TimeSeparation_1200/Output/WorkTotal_TS_1200_k1.dat WorkTotal_1200.dat
+cp TimeSeparation_1250/Output/WorkTotal_TS_1250_k1.dat WorkTotal_1250.dat
+cp TimeSeparation_1300/Output/WorkTotal_TS_1300_k1.dat WorkTotal_1300.dat
+cp TimeSeparation_1350/Output/WorkTotal_TS_1350_k1.dat WorkTotal_1350.dat
+cp TimeSeparation_1400/Output/WorkTotal_TS_1400_k1.dat WorkTotal_1400.dat
+cp TimeSeparation_1450/Output/WorkTotal_TS_1450_k1.dat WorkTotal_1450.dat
+
+cp TimeSeparation_1000/Output/WorkTheoryD_TS_1000.dat WorkTheoryD_1000.dat
+cp TimeSeparation_1050/Output/WorkTheoryD_TS_1050.dat WorkTheoryD_1050.dat
+cp TimeSeparation_1100/Output/WorkTheoryD_TS_1100.dat WorkTheoryD_1100.dat
+cp TimeSeparation_1150/Output/WorkTheoryD_TS_1150.dat WorkTheoryD_1150.dat
+cp TimeSeparation_1200/Output/WorkTheoryD_TS_1200.dat WorkTheoryD_1200.dat
+cp TimeSeparation_1250/Output/WorkTheoryD_TS_1250.dat WorkTheoryD_1250.dat
+cp TimeSeparation_1300/Output/WorkTheoryD_TS_1300.dat WorkTheoryD_1300.dat
+cp TimeSeparation_1350/Output/WorkTheoryD_TS_1350.dat WorkTheoryD_1350.dat
+cp TimeSeparation_1400/Output/WorkTheoryD_TS_1400.dat WorkTheoryD_1400.dat
+cp TimeSeparation_1450/Output/WorkTheoryD_TS_1450.dat WorkTheoryD_1450.dat
+
+cp TimeSeparation_1000/Output/WorkTheoryS_TS_1000.dat WorkTheoryS_1000.dat
+cp TimeSeparation_1050/Output/WorkTheoryS_TS_1050.dat WorkTheoryS_1050.dat
+cp TimeSeparation_1100/Output/WorkTheoryS_TS_1100.dat WorkTheoryS_1100.dat
+cp TimeSeparation_1150/Output/WorkTheoryS_TS_1150.dat WorkTheoryS_1150.dat
+cp TimeSeparation_1200/Output/WorkTheoryS_TS_1200.dat WorkTheoryS_1200.dat
+cp TimeSeparation_1250/Output/WorkTheoryS_TS_1250.dat WorkTheoryS_1250.dat
+cp TimeSeparation_1300/Output/WorkTheoryS_TS_1300.dat WorkTheoryS_1300.dat
+cp TimeSeparation_1350/Output/WorkTheoryS_TS_1350.dat WorkTheoryS_1350.dat
+cp TimeSeparation_1400/Output/WorkTheoryS_TS_1400.dat WorkTheoryS_1400.dat
+cp TimeSeparation_1450/Output/WorkTheoryS_TS_1450.dat WorkTheoryS_1450.dat
+
+cp TimeSeparation_1000/Output/WorkTheorySLag_TS_1000.dat WorkTheorySLag_1000.dat
+cp TimeSeparation_1050/Output/WorkTheorySLag_TS_1050.dat WorkTheorySLag_1050.dat
+cp TimeSeparation_1100/Output/WorkTheorySLag_TS_1100.dat WorkTheorySLag_1100.dat
+cp TimeSeparation_1150/Output/WorkTheorySLag_TS_1150.dat WorkTheorySLag_1150.dat
+cp TimeSeparation_1200/Output/WorkTheorySLag_TS_1200.dat WorkTheorySLag_1200.dat
+cp TimeSeparation_1250/Output/WorkTheorySLag_TS_1250.dat WorkTheorySLag_1250.dat
+cp TimeSeparation_1300/Output/WorkTheorySLag_TS_1300.dat WorkTheorySLag_1300.dat
+cp TimeSeparation_1350/Output/WorkTheorySLag_TS_1350.dat WorkTheorySLag_1350.dat
+cp TimeSeparation_1400/Output/WorkTheorySLag_TS_1400.dat WorkTheorySLag_1400.dat
+cp TimeSeparation_1450/Output/WorkTheorySLag_TS_1450.dat WorkTheorySLag_1450.dat
+
+tar -cvf DataLong2.tar *.dat
+rm *.dat
+
