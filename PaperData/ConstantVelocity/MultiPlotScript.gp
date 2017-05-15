@@ -1,7 +1,7 @@
 #GNUPLOT script to plot constant velocity ensemble results
 #Steven Large
 #April 10th 2017
-set term postscript landscape color enhanced lw 2 "Times-Roman,26"
+set term postscript landscape color enhanced lw 2 "Times-Roman,30"
 set output "constVelocityMulti.ps"
 set border lw 0.5
 set style data l
@@ -70,16 +70,16 @@ NOXTICS = "unset xtics; unset xlabel"
 XTICS = "set xtics 10"
 YTICS = "set ytics 10"
 
-set label 3 "ProtocolTime (s)" at screen 0.40, -0.01
-set label 4 "Work (units of k_BT)" at screen -0.01, 0.35 rotate by 90
+set label 3 "ProtocolTime, {/Symbol t} (s)" at screen 0.35, -0.05
+set label 4 "Work (units of k_BT)" at screen -0.025, 0.30 rotate by 90
 
-set label 5 "k = 1" at screen 0.2166, 1.01
-set label 6 "k = 4" at screen 0.4999, 1.01
-set label 7 "k = 16" at screen 0.7833, 1.01
+set label 5 "k = 1" at screen 0.2066, 1.01
+set label 6 "k = 4" at screen 0.4899, 1.01
+set label 7 "k = 16" at screen 0.7733, 1.01
 
-set label 8 "<{/Symbol D}{/ Symbol l}> = 20" at screen 0.99, 0.9167 rotate by 270
-set label 9 "<{/Symbol D}{/Symbol l}> = 40" at screen 0.99, 0.6501 rotate by 270
-set label 10 "<{/Symbol D}{/Symbol l}> = 80" at screen 0.99, 0.3734 rotate by 270
+set label 8 "<{/Symbol D}{/ Symbol l}> = 20" at screen 0.99, 0.9167 rotate by 270 font "Times-Roman, 26"
+set label 9 "<{/Symbol D}{/Symbol l}> = 40" at screen 0.99, 0.6501 rotate by 270 font "Times-Roman, 26"
+set label 10 "<{/Symbol D}{/Symbol l}> = 80" at screen 0.99, 0.3734 rotate by 270 font "Times-Roman, 26"
 
 #set arrow from screen 0.1425,0.92 to screen 0.2275,0.92 nohead lw 5 lc rgb "purple"
 #set arrow from screen 0.3125,0.92 to screen 0.3975,0.92 nohead lw 5 lc rgb "blue"
@@ -91,36 +91,36 @@ set label 10 "<{/Symbol D}{/Symbol l}> = 80" at screen 0.99, 0.3734 rotate by 27
 #set arrow from screen 0.100, 0.975 to screen 0.100, 0.90 nohead lw 1 lc rgb "black"
 #set arrow from screen 0.950, 0.975 to screen 0.950, 0.90 nohead lw 1 lc rgb "black"
 
-#set label 11 "{/Symbol s}^2 = 0.5" at screen 0.1625, 0.95 font "Symbol, 14"
-#set label 12 "{/Symbol s}^2 = 1" at screen 0.3325, 0.95 font "Symbol, 14"
-#set label 13 "{/Symbol s}^2 = 2" at screen 0.5025, 0.95 font "Symbol, 14"
-#set label 14 "{/Symbol s}^2 = 4" at screen 0.6725, 0.95 font "Symbol, 14"
-#set label 15 "{/Symbol s}^2 = 8" at screen 0.8425, 0.95 font "Symbol, 14"
+#set label 11 "{/Symbol s}^2 = 0.5" at screen 0.1625, 0.95 font "Symbol, 18"
+#set label 12 "{/Symbol s}^2 = 1" at screen 0.3325, 0.95 font "Symbol, 18"
+#set label 13 "{/Symbol s}^2 = 2" at screen 0.5025, 0.95 font "Symbol, 18"
+#set label 14 "{/Symbol s}^2 = 4" at screen 0.6725, 0.95 font "Symbol, 18"
+#set label 15 "{/Symbol s}^2 = 8" at screen 0.8425, 0.95 font "Symbol, 18"
 
-set label 11 "{/Symbol s}^2" at screen 0.730, 0.255 font "Symbol, 16"
+set label 11 "{/Symbol s}^2" at screen 0.730, 0.265 font "Symbol, 18"
 
-set arrow from screen 0.7, 0.235 to screen 0.77, 0.235 nohead lw 1.5 lc rgb "black"
-set arrow from screen 0.735, 0.235 to screen 0.735, 0.12 nohead lw 1.5 lc rgb "black"
+set arrow from screen 0.7, 0.245 to screen 0.77, 0.245 nohead lw 1.5 lc rgb "black"
+set arrow from screen 0.735, 0.245 to screen 0.735, 0.12 nohead lw 1.5 lc rgb "black"
 
-set arrow from screen 0.740, 0.22 to screen 0.760, 0.22 nohead lw 3 lc rgb "purple"
-set arrow from screen 0.740, 0.20 to screen 0.760, 0.20 nohead lw 3 lc rgb "blue"
-set arrow from screen 0.740, 0.18 to screen 0.760, 0.18 nohead lw 3 lc rgb "green"
-set arrow from screen 0.740, 0.16 to screen 0.760, 0.16 nohead lw 3 lc rgb "orange"
-set arrow from screen 0.740, 0.14 to screen 0.760, 0.14 nohead lw 3 lc rgb "red"
+set arrow from screen 0.740, 0.23 to screen 0.760, 0.23 nohead lw 3 lc rgb "purple"
+set arrow from screen 0.740, 0.205 to screen 0.760, 0.205 nohead lw 3 lc rgb "blue"
+set arrow from screen 0.740, 0.180 to screen 0.760, 0.180 nohead lw 3 lc rgb "green"
+set arrow from screen 0.740, 0.155 to screen 0.760, 0.155 nohead lw 3 lc rgb "orange"
+set arrow from screen 0.740, 0.130 to screen 0.760, 0.130 nohead lw 3 lc rgb "red"
 
-set label 12 "0.5" at screen 0.71, 0.22 font "Symbol, 12"
-set label 13 "1" at screen 0.715, 0.20 font "Symbol, 12"
-set label 14 "2" at screen 0.715, 0.18 font "Symbol, 12"
-set label 15 "4" at screen 0.715, 0.16 font "Symbol, 12"
-set label 16 "8" at screen 0.715, 0.14 font "Symbol, 12"
+set label 12 "0.5" at screen 0.705, 0.23 font "Symbol, 16"
+set label 13 "1" at screen 0.715, 0.205 font "Symbol, 16"
+set label 14 "2" at screen 0.715, 0.180 font "Symbol, 16"
+set label 15 "4" at screen 0.715, 0.155 font "Symbol, 16"
+set label 16 "8" at screen 0.715, 0.130 font "Symbol, 16"
 
-set object circle at screen 0.42, 0.20 size scr 0.007 fc rgb "red" fs transparent solid 0.5 noborder
-set arrow from screen 0.41, 0.17 to screen 0.43, 0.17 nohead lt 1 lw 3 lc rgb "red"
+set object circle at screen 0.42, 0.22 size scr 0.007 fc rgb "red" fs transparent solid 0.5 noborder
+set arrow from screen 0.41, 0.18 to screen 0.43, 0.18 nohead lt 1 lw 3 lc rgb "red"
 set arrow from screen 0.41, 0.14 to screen 0.43, 0.14 nohead lt 'dashed' lw 3 lc rgb "red"
 
-set label 17 "Simulation" at screen 0.44, 0.20 font "Times-Roman,12"
-set label 18 "Theoretical Prediction" at screen 0.44, 0.17 font "Times-Roman,12"
-set label 19 "Exact Solution" at screen 0.44, 0.14 font "Times-Roman,12"
+set label 17 "Simulation" at screen 0.44, 0.22 font "Times-Roman,16"
+set label 18 "Theoretical Prediction" at screen 0.44, 0.18 font "Times-Roman,16"
+set label 19 "Exact Solution" at screen 0.44, 0.14 font "Times-Roman,16"
 
 show arrow
 

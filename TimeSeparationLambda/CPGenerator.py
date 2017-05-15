@@ -1,4 +1,4 @@
-#Generates an ensemble of control parameter trajectories
+#Generates an ensemble of control parameter trajectories and writes them to the current directory
 #
 #Steven Large
 #February 15th 2017

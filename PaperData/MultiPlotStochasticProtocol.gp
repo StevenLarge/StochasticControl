@@ -1,7 +1,7 @@
 #GNUPLOT script to plot Stochastic Protocol ensemble results
 #Steven Large
 #April 10th 2017
-set term postscript landscape color enhanced lw 2 "Times-Roman,26"
+set term postscript landscape color enhanced lw 2 "Times-Roman,30"
 set output "StochasticProtocolMulti.ps"
 set border lw 0.5
 set style data l
@@ -72,17 +72,17 @@ NOXTICS = "unset xtics; unset xlabel"
 XTICS = "set xtics 10"
 YTICS = "set ytics 10"
 
-set label 3 "Protocol Time (s)" at screen 0.4, -0.01
+set label 3 "Protocol Time, {/Symbol t} (s)" at screen 0.35, -0.05
 #set label 3 "Protocol Time (s)" at screen 0.35, 0.01
-set label 4 "Work (units of k_BT)" at screen -0.01, 0.35 rotate by 90
+set label 4 "Work (units of k_BT)" at screen -0.025, 0.30 rotate by 90
 
 set label 5 "k = 4" at screen 0.2066, 1.01
 set label 6 "k = 16" at screen 0.4899, 1.01
 set label 7 "k = 64" at screen 0.7733, 1.01
 
-set label 8 "<{/Symbol D}{/ Symbol l}> = 20" at screen 0.99, 0.9167 rotate by 270
-set label 9 "<{/Symbol D}{/Symbol l}> = 40" at screen 0.99, 0.6501 rotate by 270
-set label 10 "<{/Symbol D}{/Symbol l}> = 80" at screen 0.99, 0.3734 rotate by 270
+set label 8 "<{/Symbol D}{/ Symbol l}> = 20" at screen 0.99, 0.9167 rotate by 270 font "Times-Roman, 26"
+set label 9 "<{/Symbol D}{/Symbol l}> = 40" at screen 0.99, 0.6501 rotate by 270 font "Times-Roman, 26"
+set label 10 "<{/Symbol D}{/Symbol l}> = 80" at screen 0.99, 0.3734 rotate by 270 font "Times-Roman, 26"
 
 #set object circle at screen 0.1425, 0.92 size scr 0.005 fc rgb "black" fs transparent solid 0.5 noborder
 #set object circle at screen 0.2062, 0.92 size scr 0.005 fc rgb "grey" fs transparent solid 0.5 noborder
@@ -112,20 +112,20 @@ set label 10 "<{/Symbol D}{/Symbol l}> = 80" at screen 0.99, 0.3734 rotate by 27
 #set label 14 "Deterministic Work" at screen 0.6996,0.945 font 'Times-Roman, 11'
 #set label 15 "Total Work" at screen 0.8566,0.945 font 'Times-Roman, 11'
 
-set label 11 "Total Work" at screen 0.675, 0.325 font "Times-Roman, 12"
-set label 12 "Stochastic Work" at screen 0.675, 0.275 font "Times-Roman, 12"
-set label 13 "Deterministic Work" at screen 0.675, 0.225 font "Times-Roman, 12"
+set label 11 "Total Work" at screen 0.675, 0.330 font "Times-Roman, 14"
+set label 12 "Deterministic Work" at screen 0.675, 0.280 font "Times-Roman, 14"
+set label 13 "Stochastic Work" at screen 0.675, 0.230 font "Times-Roman, 14"
 
 set arrow from screen 0.675, 0.31 to screen 0.725, 0.31 nohead lt 1 lw 2.5 lc rgb "black"
-set arrow from screen 0.675, 0.26 to screen 0.725, 0.26 nohead lt 1 lw 2.5 lc rgb "blue"
-set arrow from screen 0.675, 0.21 to screen 0.725, 0.21 nohead lt 1 lw 2.5 lc rgb "red"
+set arrow from screen 0.675, 0.26 to screen 0.725, 0.26 nohead lt 1 lw 2.5 lc rgb "red"
+set arrow from screen 0.675, 0.21 to screen 0.725, 0.21 nohead lt 1 lw 2.5 lc rgb "blue"
 
 set object circle at screen 0.76, 0.15 size scr 0.005 fc rgb "black" fs transparent solid 0.5 noborder
 set object circle at screen 0.93, 0.15 size scr 0.005 fc rgb "red" fs transparent solid 0.5 noborder
 
 set arrow from screen 0.775, 0.15 to screen 0.915,0.15 heads filled lw 1.5 lc rgb "black"
 
-set label 14 "Overdamped" at screen 0.74, 0.125 font "Times-Roman, 12"
+set label 14 "Overdamped" at screen 0.735, 0.125 font "Times-Roman, 12"
 set label 15 "Underdamped" at screen 0.85, 0.125 font "times-Roman, 12"
 
 #set arrow from screen 0.1366,0.97 to screen 0.3366,0.97 nohead lw 6 lc rgb "purple"

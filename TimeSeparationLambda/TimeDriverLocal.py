@@ -54,22 +54,6 @@ def CPPropogator(ProtocolTime):
 
 	return TimeTrack,PositionTrack,CPTrack
 
-def LangevinTrajectory(time, position, velocity, CP, CPVel):
-
-	velocity = sqrt(a)*velocity + sqrt((1-a)/(beta*m))*random.gauss(0,1) 
-	velocity = velocity + 0.5*dt*ForceConstantVelocity(position,CP)/m
-	position = position + 0.5*dt*velocity
-		
-	time += dt
-
-	CP = CP + CPVel*dt
-
-	position = position + 0.5*dt*velocity 
-	velocity = velocity + 0.5*dt*ForceConstantVelocity(position,0)/m
-	velocity = sqrt(a)*velocity + sqrt((1-a)/(beta*m))*random.gauss(0,1)
-
-	return time, position, velocity, CP
-
 def LangevinCPGenerator(time, position, velocity, CP, CPVel):
 
 	velocity = sqrt(a)*velocity + sqrt((1-a)/(beta*m))*random.gauss(0,1) 

@@ -73,7 +73,7 @@ def WorkPropogator(CPVel):
 
 	return WorkAcc#, PositionTrack#, CPTrack
 
-def Langevin(time,position,velocity,CP,CPVel):
+def Langevin(time,position,velocity,CP,CPVel): 		#Langevin Integrator
 
 	velocity = sqrt(a)*velocity + sqrt((1-a)/(beta*m))*random.gauss(0,1) 
 	velocity = velocity + 0.5*dt*ForceConstantVelocity(position,CP)/m
@@ -93,13 +93,13 @@ def Langevin(time,position,velocity,CP,CPVel):
 
 	return time,position,velocity,CP,Work
 
-def ForceConstantVelocity(position,CP):
+def ForceConstantVelocity(position,CP): 			#Calculates the force on a particle for a given control parameter velocity
 
 	F = -k*(position - CP)
 
 	return F
 
-def CalculateWork(CP,CPOld,position):
+def CalculateWork(CP,CPOld,position): 				#Calculates the work contribution for a particular change in control parameter
 
 	E1 = 0.5*k*((position - CPOld)**2)
 	E2 = 0.5*k*((position - CP)**2)
@@ -111,22 +111,22 @@ NumberTrajectories = 100
 NumberRepeats = 50
 TimeRange = 20
 
-Modifiers = ['a25','a50','a75','a90','a95','a99']
+Modifiers = ['a25','a50','a75','a90','a95','a99'] 													#Trajectory distributions with different damping parameters (a)
 
 for MasterIndex in range(len(Modifiers)):
 
-	path = 'Trajectories_' + Modifiers[MasterIndex] + '/'
+	path = 'Trajectories_' + Modifiers[MasterIndex] + '/' 											#Directory where control parameter trajectories are stored
 	WritePath = 'Output/'
 
 	filename_base = 'CP_Trajectory_'
-	filename_base_write = 'WorkTotal_' + Modifiers[MasterIndex] + '_k' + str(k) + '.dat'
+	filename_base_write = 'WorkTotal_' + Modifiers[MasterIndex] + '_k' + str(k) + '.dat'			#Write file for Work calculation
 
 	WorkTot = []
 	Tau = []
 
 	for indexOuter in range(TimeRange):
 
-		ProtocolTime = 10 + 5*indexOuter
+		ProtocolTime = 10 + 5*indexOuter 															#Protocol times for whcih work values are calulated
 		filenameInner = filename_base + str(ProtocolTime) + '_'
 
 		WorkTraj = 0
@@ -135,21 +135,21 @@ for MasterIndex in range(len(Modifiers)):
 
 		for indexInner in range(NumberTrajectories):
 
-			filename = filenameInner + str(indexInner) + '.dat'
+			filename = filenameInner + str(indexInner) + '.dat' 									#NOTE: There has to be a CP trajectory file with this name
 			Time,CP = ReadData(filename,path)
 
 			WorkAcc = 0
 
-			for index3 in range(NumberRepeats):
+			for index3 in range(NumberRepeats):														#Number of repetitions of teh same CP trajectory
 
-				WorkTemp = WorkPropogator(CPVel)
+				WorkTemp = WorkPropogator(CPVel) 													#Calculate the work associated with a realzation of the protocol
 				WorkAcc = WorkAcc + WorkTemp
 
-			WorkTraj = WorkTraj + WorkAcc/float(NumberRepeats)
+			WorkTraj = WorkTraj + WorkAcc/float(NumberRepeats) 										#Work for particular protocol, averaged over the number of repetitions
 
-		WorkTot.append(float(WorkTraj)/float(NumberTrajectories))
+		WorkTot.append(float(WorkTraj)/float(NumberTrajectories)) 									#Average work over different realizations of protocol as well
 		Tau.append(ProtocolTime)
 
-	WriteData(filename_base_write,WritePath,WorkTot,Tau)
+	WriteData(filename_base_write,WritePath,WorkTot,Tau) 											#Write work vs. protocol time data to file.
 
 

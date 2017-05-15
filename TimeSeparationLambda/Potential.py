@@ -1,4 +1,4 @@
-#This module contains all routines related to calcualtions of energies and forces as well as work contributions
+#This module contains all routines related to calculations of energies and forces as well as work contributions
 #
 #Steven Large
 #June 21st 2016
